@@ -1,109 +1,96 @@
 ---
-title: Contact & devis gratuit — DS DECORATION | Nangy (74)
-description: Contactez DS DECORATION SAS, 291 route de Loex à Nangy (74380). Tél. 07 49 150 150. Devis gratuit pour vos travaux de peinture, tapisserie, plâtrerie et revêtements.
+title: Contact et devis gratuit | DS Décoration, Nangy
+description: Contactez DS Décoration au 07 49 150 150 ou par e-mail. 291 route de Loex, 74380 Nangy. Devis gratuit pour vos travaux de peinture, papier peint, plâtrerie et sols.
 path: contact/
 nav: contact
 ---
-    <section class="page-hero">
-      <div class="page-hero__bg"><img src="{{root}}assets/img/atelier-echelle.webp" alt=""></div>
-      <div class="container">
-        <ol class="breadcrumb"><li><a href="{{root}}">Accueil</a></li><li>Contact</li></ol>
-        <h1>Contactez-nous</h1>
-        <p class="lead">Vous avez des questions ou un projet ? Nous vous proposons un devis gratuit pour l'estimation de vos travaux.</p>
+    <header class="page-head">
+      <div class="wrap">
+        <p class="crumbs"><a href="{{root}}">Accueil</a> / Contact</p>
+        <h1>Parlons de vos travaux</h1>
+        <p class="intro">Le devis est gratuit. Le plus simple est de nous appeler ; vous pouvez aussi nous décrire votre projet avec le formulaire.</p>
       </div>
-    </section>
+    </header>
 
-    <section class="section section--paper" id="devis">
-      <div class="container contact">
-        <div class="contact-cards">
-          <div class="contact-card reveal">
-            {{icon:phone}}
+    <section class="block">
+      <div class="wrap contact">
+        <div>
+          <h2>Coordonnées</h2>
+          <dl class="contact-list">
             <div>
-              <h3>Par téléphone</h3>
-              <p><a href="tel:{{phone_href}}">{{phone}}</a><br><small>Caroline — Assistante administrative</small></p>
-              <p style="margin-top:8px"><a href="tel:{{phone_manager_href}}">{{phone_manager}}</a><br><small>Sébastien — Gérant</small></p>
+              <dt>Caroline, assistante administrative</dt>
+              <dd><a class="big" href="tel:{{phone_href}}">{{phone}}</a></dd>
             </div>
-          </div>
-          <div class="contact-card reveal" data-delay="1">
-            {{icon:mail}}
             <div>
-              <h3>Par e-mail</h3>
-              <p><a href="mailto:{{email}}">{{email}}</a></p>
+              <dt>Sébastien, gérant</dt>
+              <dd><a class="big" href="tel:{{phone_manager_href}}">{{phone_manager}}</a></dd>
             </div>
-          </div>
-          <div class="contact-card reveal" data-delay="2">
-            {{icon:pin}}
             <div>
-              <h3>Nos bureaux</h3>
-              <p>DS DECORATION SAS<br>{{address}}<br>{{city}}</p>
+              <dt>E-mail</dt>
+              <dd><a href="mailto:{{email}}">{{email}}</a></dd>
             </div>
-          </div>
-          <div class="contact-card reveal" data-delay="3">
-            {{icon:building}}
             <div>
-              <h3>Siège social</h3>
-              <p>3 rue de Verdun<br>69190 Saint-Fons</p>
+              <dt>Adresse</dt>
+              <dd>DS DECORATION SAS<br>{{address}}<br>{{city}}</dd>
             </div>
-          </div>
+            <div>
+              <dt>Siège social</dt>
+              <dd>3 rue de Verdun<br>69190 Saint-Fons</dd>
+            </div>
+          </dl>
         </div>
 
-        <form class="form reveal" id="contact-form" data-to="{{email}}" novalidate>
-          <h2 style="font-size:1.8rem">Demande de devis</h2>
-          <p style="color:var(--muted)">Décrivez-nous votre projet, nous revenons vers vous rapidement.</p>
-          <div class="form__grid">
-            <div class="field">
-              <label for="nom">Nom <abbr title="obligatoire">*</abbr></label>
-              <input id="nom" name="nom" type="text" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="email">Adresse e-mail <abbr title="obligatoire">*</abbr></label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-              <label for="telephone">Téléphone</label>
-              <input id="telephone" name="telephone" type="tel" autocomplete="tel">
-            </div>
-            <div class="field">
-              <label for="ville">Ville du chantier</label>
-              <input id="ville" name="ville" type="text" autocomplete="address-level2">
-            </div>
-            <div class="field field--full">
-              <label for="prestation">Type de travaux</label>
-              <select id="prestation" name="prestation">
-                <option value="">Choisir une prestation…</option>
-                <option>Peinture</option>
-                <option>Tapisserie / papier peint</option>
-                <option>Plâtrerie / cloisons / combles</option>
-                <option>Revêtement de sol et mur</option>
-                <option>Rénovation complète</option>
-                <option>Rénovation après sinistre</option>
-                <option>Autre</option>
-              </select>
-            </div>
-            <div class="field field--full">
-              <label for="message">Message <abbr title="obligatoire">*</abbr></label>
-              <textarea id="message" name="message" required placeholder="Surface, pièces concernées, délais souhaités…"></textarea>
-            </div>
-            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <label class="consent field--full">
-              <input type="checkbox" name="consentement" required>
-              <span>J'accepte que les données saisies dans ce formulaire soient utilisées dans le but d'établir le contact. Je peux révoquer mon consentement à tout moment.</span>
-            </label>
+        <form class="form" id="devis-form" data-to="{{email}}" novalidate>
+          <h2 class="wide">Demande de devis</h2>
+          <div class="field">
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" type="text" autocomplete="name" required>
           </div>
-          <div style="margin-top:24px">
-            <button class="btn btn--primary" type="submit">Envoyer ma demande {{icon:arrow}}</button>
+          <div class="field">
+            <label for="telephone">Téléphone <small>(facultatif)</small></label>
+            <input id="telephone" name="telephone" type="tel" autocomplete="tel">
           </div>
-          <p class="form__note">Les champs suivis d'un astérisque (*) sont obligatoires.</p>
-          <p class="form__status" role="status">Votre messagerie s'ouvre avec votre demande pré-remplie : il ne reste plus qu'à cliquer sur « Envoyer ». Vous pouvez aussi nous écrire directement à {{email}}.</p>
+          <div class="field wide">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="commune">Commune du chantier</label>
+            <input id="commune" name="commune" type="text" autocomplete="address-level2">
+          </div>
+          <div class="field">
+            <label for="travaux">Type de travaux</label>
+            <select id="travaux" name="travaux">
+              <option value="">À préciser</option>
+              <option>Peinture</option>
+              <option>Papier peint</option>
+              <option>Plâtrerie, cloisons, combles</option>
+              <option>Carrelage, faïence, parquet</option>
+              <option>Rénovation complète</option>
+              <option>Remise en état après sinistre</option>
+            </select>
+          </div>
+          <div class="field wide">
+            <label for="message">Votre projet</label>
+            <textarea id="message" name="message" required placeholder="Pièces concernées, surfaces approximatives, période souhaitée…"></textarea>
+          </div>
+          <input class="trap" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="agree wide">
+            <input type="checkbox" name="accord" required>
+            <span>J'accepte que ces informations soient utilisées pour me recontacter au sujet de ma demande.</span>
+          </label>
+          <div class="wide">
+            <button class="btn btn-ink" type="submit">Préparer l'e-mail de demande</button>
+          </div>
+          <p class="form-note wide">Le bouton ouvre votre messagerie avec la demande déjà rédigée : il ne reste qu'à l'envoyer. Tous les champs sont obligatoires sauf le téléphone, la commune et le type de travaux.</p>
+          <p class="form-done wide" role="status">Votre messagerie devrait s'être ouverte. Si rien ne s'affiche, écrivez-nous directement à {{email}}.</p>
         </form>
       </div>
     </section>
 
-    <section class="section" style="padding-top:0;background:var(--paper)">
-      <div class="container">
-        <div class="map reveal">
-          <iframe title="Plan d'accès — DS DECORATION, Nangy" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=291+route+de+Loex,+74380+Nangy,+France&amp;output=embed"></iframe>
-        </div>
+    <section class="map" aria-label="Plan d'accès">
+      <div class="wrap map-inner">
+        <p>291 route de Loex, 74380 Nangy. La carte est fournie par Google Maps.</p>
+        <button class="btn btn-ink" type="button" data-load-map="https://www.google.com/maps?q=291+route+de+Loex,+74380+Nangy,+France&amp;output=embed">Afficher la carte</button>
       </div>
     </section>

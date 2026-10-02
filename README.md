@@ -1,11 +1,11 @@
-# DS DECORATION — site web
+# DS Décoration, site web
 
-Refonte du site [dsdecoration.com](https://www.dsdecoration.com) (anciennement IONOS MyWebsite) :
-site statique HTML/CSS/JS, sans dépendance, prêt pour GitHub Pages ou n'importe quel hébergeur.
+Refonte du site de DS DECORATION SAS (peinture, papiers peints, plâtrerie, sols ; Nangy, Haute-Savoie).
+Site statique en HTML, CSS et JavaScript, sans dépendance ni service externe.
 
 ## Pages
 
-| URL | Source |
+| Adresse | Source |
 | --- | --- |
 | `/` | `src/pages/index.html` |
 | `/nos-realisations/` | `src/pages/realisations.html` |
@@ -15,32 +15,30 @@ site statique HTML/CSS/JS, sans dépendance, prêt pour GitHub Pages ou n'import
 
 ## Modifier le site
 
-1. Éditer les fichiers dans `src/` (en-tête et pied de page communs dans `src/partials/`).
-   Les coordonnées (téléphone, e-mail, adresse) sont centralisées dans `SITE` en haut de `build.py`.
+1. Éditer les fichiers de `src/` (en-tête et pied de page communs dans `src/partials/`).
+   Téléphones, e-mail et adresse sont réunis dans `SITE`, en haut de `build.py`.
 2. Régénérer les pages : `python3 build.py`
-3. Prévisualiser : `python3 -m http.server 8000` puis http://localhost:8000
-4. Commiter les fichiers `src/` **et** les pages générées.
+3. Voir le résultat : `python3 -m http.server 8000`, puis http://localhost:8000
 
-Styles : `assets/css/style.css` (couleurs du logo dans `:root`). Scripts : `assets/js/main.js`.
+Styles : `assets/css/style.css` (palette en tête de fichier). Scripts : `assets/js/main.js`.
 
-## Mise en ligne (GitHub Pages)
+## Choix de conception
 
-Settings → Pages → *Deploy from a branch* → `main` / `/ (root)`.
-Pour le domaine `www.dsdecoration.com` : ajouter le domaine dans Settings → Pages
-(cela crée un fichier `CNAME`), puis pointer le DNS `www` en CNAME vers `syassinehub.github.io`.
+- Photos : uniquement celles des chantiers de l'entreprise (`assets/img/photos/` pour les recadrages,
+  `assets/img/realisations/` pour les originaux avec vignettes avant travaux).
+- Palette : blanc, gris plâtre `#eef0f1`, bleu ardoise `#3d4b5a` (la teinte des soubassements
+  peints sur leurs chantiers) et l'orange du logo `#f6821f`, réservé aux actions.
+- Typographie : Jost, une seule famille, hébergée dans `assets/fonts/` (licence OFL).
+- Les trois formes du logo, redessinées en SVG, sont le seul élément décoratif de la page d'accueil.
+- Aucun cookie ni appel externe : la carte Google n'est chargée qu'au clic.
 
-## À savoir
+## Avant mise en service
 
-- **Formulaire de contact** : il ouvre la messagerie du visiteur avec la demande pré-remplie
-  (aucun serveur requis). Pour un envoi direct, brancher un service type Formspree / Web3Forms
-  dans `assets/js/main.js`.
-- **Mentions légales** : l'hébergeur indiqué est GitHub — à adapter si le site est hébergé ailleurs.
-- Les images proviennent de l'ancien site ; la bannière d'accueil (960 px) gagnerait à être
-  remplacée par une photo plus grande.
+- Mentions légales : compléter l'hébergeur.
+- Formulaire : il prépare un e-mail dans la messagerie du visiteur. Pour un envoi direct,
+  brancher un service d'envoi de formulaires dans `assets/js/main.js`.
 
-## Documentation projet
+## Documentation
 
-- `docs/` : coffre **Obsidian** (ouvrir le dossier comme vault) — contenu récupéré de l'ancien site,
-  charte graphique, architecture, analyse NotebookLM, liste des tâches.
-- `graphify-out/` : graphe de connaissances du projet (`graph.html` à ouvrir dans un navigateur,
-  `GRAPH_REPORT.md`). Mise à jour : `graphify update .`
+- `docs/` : coffre Obsidian (contenu de l'ancien site, charte, architecture, analyse NotebookLM, tâches).
+- `graphify-out/` : graphe du projet (`graph.html`). Mise à jour : `graphify update .`

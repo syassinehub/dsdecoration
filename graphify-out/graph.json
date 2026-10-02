@@ -26,22 +26,10 @@
       "norm_label": "build.py"
     },
     {
-      "label": "icon()",
-      "file_type": "code",
-      "source_file": "build.py",
-      "source_location": "L57",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "build_icon",
-      "community": 4,
-      "community_name": "build.py",
-      "norm_label": "icon()"
-    },
-    {
       "label": "parse()",
       "file_type": "code",
       "source_file": "build.py",
-      "source_location": "L66",
+      "source_location": "L38",
       "_callable": true,
       "_origin": "ast",
       "id": "build_parse",
@@ -53,7 +41,7 @@
       "label": "render()",
       "file_type": "code",
       "source_file": "build.py",
-      "source_location": "L76",
+      "source_location": "L48",
       "_callable": true,
       "_origin": "ast",
       "id": "build_render",
@@ -65,7 +53,7 @@
       "label": "main()",
       "file_type": "code",
       "source_file": "build.py",
-      "source_location": "L88",
+      "source_location": "L59",
       "_callable": true,
       "_origin": "ast",
       "id": "build_main",
@@ -81,19 +69,19 @@
       "_origin": "ast",
       "id": "readme",
       "community": 3,
-      "community_name": "DS DECORATION \u2014 site web",
+      "community_name": "DS D\u00e9coration, site web",
       "norm_label": "readme.md"
     },
     {
-      "label": "DS DECORATION \u2014 site web",
+      "label": "DS D\u00e9coration, site web",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme_ds_decoration_site_web",
+      "id": "readme_ds_d\u00e9coration_site_web",
       "community": 3,
-      "community_name": "DS DECORATION \u2014 site web",
-      "norm_label": "ds decoration \u2014 site web"
+      "community_name": "DS D\u00e9coration, site web",
+      "norm_label": "ds decoration, site web"
     },
     {
       "label": "Pages",
@@ -103,7 +91,7 @@
       "_origin": "ast",
       "id": "readme_pages",
       "community": 3,
-      "community_name": "DS DECORATION \u2014 site web",
+      "community_name": "DS D\u00e9coration, site web",
       "norm_label": "pages"
     },
     {
@@ -114,30 +102,41 @@
       "_origin": "ast",
       "id": "readme_modifier_le_site",
       "community": 3,
-      "community_name": "DS DECORATION \u2014 site web",
+      "community_name": "DS D\u00e9coration, site web",
       "norm_label": "modifier le site"
     },
     {
-      "label": "Mise en ligne (GitHub Pages)",
+      "label": "Choix de conception",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L26",
+      "source_location": "L25",
       "_origin": "ast",
-      "id": "readme_mise_en_ligne_github_pages",
+      "id": "readme_choix_de_conception",
       "community": 3,
-      "community_name": "DS DECORATION \u2014 site web",
-      "norm_label": "mise en ligne (github pages)"
+      "community_name": "DS D\u00e9coration, site web",
+      "norm_label": "choix de conception"
     },
     {
-      "label": "\u00c0 savoir",
+      "label": "Avant mise en service",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L32",
+      "source_location": "L35",
       "_origin": "ast",
-      "id": "readme_\u00e0_savoir",
+      "id": "readme_avant_mise_en_service",
       "community": 3,
-      "community_name": "DS DECORATION \u2014 site web",
-      "norm_label": "a savoir"
+      "community_name": "DS D\u00e9coration, site web",
+      "norm_label": "avant mise en service"
+    },
+    {
+      "label": "Documentation",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "readme_documentation",
+      "community": 3,
+      "community_name": "DS D\u00e9coration, site web",
+      "norm_label": "documentation"
     },
     {
       "label": "00 - Projet DS DECORATION.md",
@@ -179,8 +178,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_01_contenu_de_l_ancien_site",
-      "community": 0,
-      "community_name": "00 - Projet DS DECORATION.md",
+      "community": 2,
+      "community_name": "Contenu de l'ancien site",
       "norm_label": "01 - contenu de l'ancien site.md"
     },
     {
@@ -267,9 +266,64 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "docs_02_charte_graphique_charte_graphique",
-      "community": 0,
-      "community_name": "00 - Projet DS DECORATION.md",
+      "community": 6,
+      "community_name": "Charte graphique",
       "norm_label": "charte graphique"
+    },
+    {
+      "label": "Ce qui a \u00e9t\u00e9 retir\u00e9 de la v1",
+      "file_type": "document",
+      "source_file": "docs/02 - Charte graphique.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "docs_02_charte_graphique_ce_qui_a_\u00e9t\u00e9_retir\u00e9_de_la_v1",
+      "community": 6,
+      "community_name": "Charte graphique",
+      "norm_label": "ce qui a ete retire de la v1"
+    },
+    {
+      "label": "Palette",
+      "file_type": "document",
+      "source_file": "docs/02 - Charte graphique.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_02_charte_graphique_palette",
+      "community": 6,
+      "community_name": "Charte graphique",
+      "norm_label": "palette"
+    },
+    {
+      "label": "Typographie",
+      "file_type": "document",
+      "source_file": "docs/02 - Charte graphique.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "docs_02_charte_graphique_typographie",
+      "community": 6,
+      "community_name": "Charte graphique",
+      "norm_label": "typographie"
+    },
+    {
+      "label": "\u00c9l\u00e9ment signature",
+      "file_type": "document",
+      "source_file": "docs/02 - Charte graphique.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "docs_02_charte_graphique_\u00e9l\u00e9ment_signature",
+      "community": 6,
+      "community_name": "Charte graphique",
+      "norm_label": "element signature"
+    },
+    {
+      "label": "Photos",
+      "file_type": "document",
+      "source_file": "docs/02 - Charte graphique.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "docs_02_charte_graphique_photos",
+      "community": 6,
+      "community_name": "Charte graphique",
+      "norm_label": "photos"
     },
     {
       "label": "03 - Architecture technique.md",
@@ -300,8 +354,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_04_analyse_notebooklm",
-      "community": 1,
-      "community_name": "Analyse NotebookLM",
+      "community": 0,
+      "community_name": "00 - Projet DS DECORATION.md",
       "norm_label": "04 - analyse notebooklm.md"
     },
     {
@@ -355,8 +409,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_05_\u00e0_faire",
-      "community": 1,
-      "community_name": "Analyse NotebookLM",
+      "community": 0,
+      "community_name": "00 - Projet DS DECORATION.md",
       "norm_label": "05 - a faire.md"
     },
     {
@@ -366,8 +420,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "docs_05_\u00e0_faire_\u00e0_faire",
-      "community": 1,
-      "community_name": "Analyse NotebookLM",
+      "community": 0,
+      "community_name": "00 - Projet DS DECORATION.md",
       "norm_label": "a faire"
     }
   ],
@@ -376,18 +430,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "build.py",
-      "source_location": "L57",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "build",
-      "target": "build_icon",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "build.py",
-      "source_location": "L88",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
       "source": "build",
@@ -398,7 +441,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "build.py",
-      "source_location": "L66",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
       "source": "build",
@@ -409,7 +452,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "build.py",
-      "source_location": "L76",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
       "source": "build",
@@ -421,19 +464,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "build.py",
-      "source_location": "L78",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "build_render",
-      "target": "build_icon",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "build.py",
-      "source_location": "L92",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "build_main",
@@ -445,7 +476,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "build.py",
-      "source_location": "L97",
+      "source_location": "L68",
       "weight": 1.0,
       "_origin": "ast",
       "source": "build_main",
@@ -460,18 +491,40 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "readme_ds_decoration_site_web",
+      "target": "readme_ds_d\u00e9coration_site_web",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L26",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "readme_ds_decoration_site_web",
-      "target": "readme_mise_en_ligne_github_pages",
+      "source": "readme_ds_d\u00e9coration_site_web",
+      "target": "readme_avant_mise_en_service",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_ds_d\u00e9coration_site_web",
+      "target": "readme_choix_de_conception",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_ds_d\u00e9coration_site_web",
+      "target": "readme_documentation",
       "confidence_score": 1.0
     },
     {
@@ -481,7 +534,7 @@
       "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "readme_ds_decoration_site_web",
+      "source": "readme_ds_d\u00e9coration_site_web",
       "target": "readme_modifier_le_site",
       "confidence_score": 1.0
     },
@@ -492,19 +545,8 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "readme_ds_decoration_site_web",
+      "source": "readme_ds_d\u00e9coration_site_web",
       "target": "readme_pages",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L32",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_ds_decoration_site_web",
-      "target": "readme_\u00e0_savoir",
       "confidence_score": 1.0
     },
     {
@@ -675,6 +717,61 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/02 - Charte graphique.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_02_charte_graphique_charte_graphique",
+      "target": "docs_02_charte_graphique_ce_qui_a_\u00e9t\u00e9_retir\u00e9_de_la_v1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02 - Charte graphique.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_02_charte_graphique_charte_graphique",
+      "target": "docs_02_charte_graphique_palette",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02 - Charte graphique.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_02_charte_graphique_charte_graphique",
+      "target": "docs_02_charte_graphique_photos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02 - Charte graphique.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_02_charte_graphique_charte_graphique",
+      "target": "docs_02_charte_graphique_typographie",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/02 - Charte graphique.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_02_charte_graphique_charte_graphique",
+      "target": "docs_02_charte_graphique_\u00e9l\u00e9ment_signature",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/03 - Architecture technique.md",
       "source_location": "L4",
       "weight": 1.0,
@@ -751,5 +848,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "cfab2d7bee22a6b4fd03db074f9eb09f1d42107c"
+  "built_at_commit": "2916d989c15cf4e7a83cf61098d7f937a1aa488b"
 }

@@ -1,27 +1,27 @@
 {
   "assets/js/main.js": {
-    "mtime": 1790973365.3963888,
-    "ast_hash": "eeb259522677297912171c1a2c77ce64",
+    "mtime": 1790974870.306099,
+    "ast_hash": "325c3c9a1e76193567e23f9fef904652",
     "semantic_hash": ""
   },
   "build.py": {
-    "mtime": 1790973502.3463604,
-    "ast_hash": "00a6bdf7594e98ea98f083970339294c",
+    "mtime": 1790974733.1061213,
+    "ast_hash": "a34ecdbcbe7274c741d4a888f03f6017",
     "semantic_hash": ""
   },
   "404.html": {
-    "mtime": 1790973727.44632,
-    "ast_hash": "84249476c667a402f5eb7de03df77608",
+    "mtime": 1790974893.6160948,
+    "ast_hash": "deff48a8d66e3311f14e2c8c1fac66e4",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1790973751.4463153,
-    "ast_hash": "dd8490f4d6766380c97d575bddde391e",
+    "mtime": 1790974893.6260948,
+    "ast_hash": "8916d399a3c50ff60adc7008e8d0b1eb",
     "semantic_hash": ""
   },
   "contact/index.html": {
-    "mtime": 1790973727.44632,
-    "ast_hash": "8b3d57d26e25961c688b8782454ad884",
+    "mtime": 1790974893.6160948,
+    "ast_hash": "1f9d02449899937e5533a08d0049b71a",
     "semantic_hash": ""
   },
   "docs/00 - Projet DS DECORATION.md": {
@@ -35,13 +35,13 @@
     "semantic_hash": ""
   },
   "docs/02 - Charte graphique.md": {
-    "mtime": 1790973900.9962835,
-    "ast_hash": "ee8d88912f1acba9b61c3d824fd05e3c",
+    "mtime": 1790974893.636095,
+    "ast_hash": "196fa5a451dc2ac086ca34e833bc06df",
     "semantic_hash": ""
   },
   "docs/03 - Architecture technique.md": {
-    "mtime": 1790973900.9962835,
-    "ast_hash": "4fe35adc5239542be78038d8834650b0",
+    "mtime": 1790974893.646095,
+    "ast_hash": "0c9f28018a614b35ed4ac5eb273b8b6c",
     "semantic_hash": ""
   },
   "docs/04 - Analyse NotebookLM.md": {
@@ -50,23 +50,23 @@
     "semantic_hash": ""
   },
   "docs/05 - \u00c0 faire.md": {
-    "mtime": 1790973901.0062835,
-    "ast_hash": "405e7980c026aaeaf5c8d61d5a32d492",
+    "mtime": 1790974893.636095,
+    "ast_hash": "c97dc516d45f18ce4526f5772121f231",
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1790973727.44632,
-    "ast_hash": "21a8608b9b2e3bdbacdc1840ff2f47ae",
+    "mtime": 1790974893.6160948,
+    "ast_hash": "9933f79b8713b2c42e34768c178a304f",
     "semantic_hash": ""
   },
   "mentions-legales/index.html": {
-    "mtime": 1790973727.44632,
-    "ast_hash": "b36b9b134c9d487fc234c1dbe56f279d",
+    "mtime": 1790974893.6160948,
+    "ast_hash": "39554cb11aa46d8ae36d8d7772347198",
     "semantic_hash": ""
   },
   "nos-realisations/index.html": {
-    "mtime": 1790973727.44632,
-    "ast_hash": "1ed8bbbadfeec392d13bb9f4dd54e068",
+    "mtime": 1790974893.6160948,
+    "ast_hash": "c9ebb945b6e268b0d9642be787a9dd2c",
     "semantic_hash": ""
   },
   "robots.txt": {
@@ -75,73 +75,43 @@
     "semantic_hash": ""
   },
   "src/pages/404.html": {
-    "mtime": 1790973502.3563604,
-    "ast_hash": "3adcdbee7e57d6167ba814014c577e1c",
+    "mtime": 1790974725.8761225,
+    "ast_hash": "8f4bbce9abc0b6483df330982a02122f",
     "semantic_hash": ""
   },
   "src/pages/contact.html": {
-    "mtime": 1790973482.8863661,
-    "ast_hash": "37a80e1fd66e4c3bf4fbc417e5f0ba52",
+    "mtime": 1790974713.6061237,
+    "ast_hash": "4f8660192e8f806494fa1ff46884dd08",
     "semantic_hash": ""
   },
   "src/pages/index.html": {
-    "mtime": 1790973873.5862894,
-    "ast_hash": "01ab3fa73eacc722daddeb9d3cc69880",
+    "mtime": 1790974829.2061064,
+    "ast_hash": "5807158e9352af17742515ec5d6788d5",
     "semantic_hash": ""
   },
   "src/pages/mentions-legales.html": {
-    "mtime": 1790973491.346364,
-    "ast_hash": "56d37f72005c7d4e1b2cd3c9bfca58b0",
+    "mtime": 1790974720.496123,
+    "ast_hash": "bab717e99360afecda0e2381827509a0",
     "semantic_hash": ""
   },
   "src/pages/realisations.html": {
-    "mtime": 1790973638.2463374,
-    "ast_hash": "7b3071c9b9fd1ddf8fc542814d6eee06",
+    "mtime": 1790974733.0661213,
+    "ast_hash": "2a9749de45f94eb5aa4c7d2ee1e4633d",
     "semantic_hash": ""
   },
   "src/partials/footer.html": {
-    "mtime": 1790973727.39632,
-    "ast_hash": "db5dde43b566d3657fce2e9717e20dc5",
+    "mtime": 1790974622.916145,
+    "ast_hash": "44daf522abce51b350f4735f072d0319",
     "semantic_hash": ""
   },
   "src/partials/header.html": {
-    "mtime": 1790973413.396381,
-    "ast_hash": "a93be4f1da933bb3a5c04799754a9b05",
+    "mtime": 1790974618.8161457,
+    "ast_hash": "e7991521d904d5aaaed7dcd6228f274f",
     "semantic_hash": ""
   },
   "assets/img/apple-touch-icon.png": {
     "mtime": 1790973276.3364072,
     "ast_hash": "c01fe8be5e136bdd79255372fb0e1dc0",
-    "semantic_hash": ""
-  },
-  "assets/img/atelier-echelle.jpg": {
-    "mtime": 1790973229.4264083,
-    "ast_hash": "21117069ea1bdacc40762867247152c0",
-    "semantic_hash": ""
-  },
-  "assets/img/atelier-echelle.webp": {
-    "mtime": 1790973229.4164083,
-    "ast_hash": "ba9ffe519d7c7198de8681e493a108ad",
-    "semantic_hash": ""
-  },
-  "assets/img/equipe-peintre.jpg": {
-    "mtime": 1790973229.3364084,
-    "ast_hash": "6a797a1a6a64afc5ded4cca8acee944d",
-    "semantic_hash": ""
-  },
-  "assets/img/equipe-peintre.webp": {
-    "mtime": 1790973229.3264084,
-    "ast_hash": "3a6af0ca3f81de02f3664b0c87c5458f",
-    "semantic_hash": ""
-  },
-  "assets/img/hero-renovation.jpg": {
-    "mtime": 1790973229.0964084,
-    "ast_hash": "4e715bf0a1e7e89a3fe2821709e3b1ee",
-    "semantic_hash": ""
-  },
-  "assets/img/hero-renovation.webp": {
-    "mtime": 1790973229.0864084,
-    "ast_hash": "5a093c1c891f56fa0c03fe86196e2f63",
     "semantic_hash": ""
   },
   "assets/img/logo-white.png": {
@@ -234,49 +204,94 @@
     "ast_hash": "d531ca2162bdcb621c1adf8da6468e0f",
     "semantic_hash": ""
   },
-  "assets/img/service-peinture.jpg": {
-    "mtime": 1790973229.1664085,
-    "ast_hash": "a5a502b7144865f6cd43bac437bb770e",
-    "semantic_hash": ""
-  },
-  "assets/img/service-peinture.webp": {
-    "mtime": 1790973229.1664085,
-    "ast_hash": "7e510e5ace4aae12e3b9deb5b42422cc",
-    "semantic_hash": ""
-  },
-  "assets/img/service-platrerie.jpg": {
-    "mtime": 1790973229.2464085,
-    "ast_hash": "db021664f728a0be958363cb78313421",
-    "semantic_hash": ""
-  },
-  "assets/img/service-platrerie.webp": {
-    "mtime": 1790973229.2364085,
-    "ast_hash": "51123a5e3bf8d9ef91372135ca627270",
-    "semantic_hash": ""
-  },
-  "assets/img/service-revetement.jpg": {
-    "mtime": 1790973229.1364083,
-    "ast_hash": "20980c31b5b9f03f04a9480592c6aacf",
-    "semantic_hash": ""
-  },
-  "assets/img/service-revetement.webp": {
-    "mtime": 1790973229.1264083,
-    "ast_hash": "b48811781bdd78f0ba4b67c6f3ffec6c",
-    "semantic_hash": ""
-  },
-  "assets/img/service-tapisserie.jpg": {
-    "mtime": 1790973229.2064085,
-    "ast_hash": "b6955fc433be0ba6cb1f3a81f4304753",
-    "semantic_hash": ""
-  },
-  "assets/img/service-tapisserie.webp": {
-    "mtime": 1790973229.1964085,
-    "ast_hash": "48cfa7ed603cfbc2700bfaf5e6224657",
-    "semantic_hash": ""
-  },
   "favicon.png": {
     "mtime": 1790973276.3364072,
     "ast_hash": "b3c1a0b9fac0969f9158bf6ea038a587",
+    "semantic_hash": ""
+  },
+  "assets/fonts/OFL.txt": {
+    "mtime": 1790974514.4461567,
+    "ast_hash": "f35c7b79fb15a049b5e024ec8dd02c14",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/combles.jpg": {
+    "mtime": 1790974470.3961644,
+    "ast_hash": "8d93da0da5a19cfdf7e9cdd566aa3053",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/combles.webp": {
+    "mtime": 1790974470.3961644,
+    "ast_hash": "63ea0e1fbaf235ac4828d1ecc57d3861",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/cuisine.jpg": {
+    "mtime": 1790974470.3661644,
+    "ast_hash": "57b5fd1bf5bfa6e8ebea3bb69e9de5b6",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/cuisine.webp": {
+    "mtime": 1790974470.3561645,
+    "ast_hash": "61c14dd56080edaeb2c2440a264583b0",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/douche.jpg": {
+    "mtime": 1790974470.1861646,
+    "ast_hash": "f2c28af0c801b808840a7cf201c098b9",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/douche.webp": {
+    "mtime": 1790974470.1861646,
+    "ast_hash": "6dc819ff4b927d757b6c394492fe66d0",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/salle-de-bain.jpg": {
+    "mtime": 1790974470.1661646,
+    "ast_hash": "1e2d76393993a91abf9f07d5cf01c92e",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/salle-de-bain.webp": {
+    "mtime": 1790974470.1661646,
+    "ast_hash": "c85d3555e24e17cbe12116786ca9ccf1",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/salon.jpg": {
+    "mtime": 1790974470.4361646,
+    "ast_hash": "be25720fe59e4a1fabcec9db69548cda",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/salon.webp": {
+    "mtime": 1790974470.4261646,
+    "ast_hash": "b76ff23f56dfcd68fd6e4d40e0dd8da1",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/sejour.jpg": {
+    "mtime": 1790974829.1861064,
+    "ast_hash": "0430ec28213cc1de17cc0649e5e1c50a",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/sejour.webp": {
+    "mtime": 1790974829.1861064,
+    "ast_hash": "cb4feba8fe1155c78d321a794d355714",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/terrasse.jpg": {
+    "mtime": 1790974470.1461644,
+    "ast_hash": "0ad9327cfbd6507c48a06ece4c06806d",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/terrasse.webp": {
+    "mtime": 1790974470.1361644,
+    "ast_hash": "bc8faf4933daab50f9e2b5a66138e18a",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/wc.jpg": {
+    "mtime": 1790974470.4561646,
+    "ast_hash": "9f0f4c3825894295bc41f76720546233",
+    "semantic_hash": ""
+  },
+  "assets/img/photos/wc.webp": {
+    "mtime": 1790974470.4561646,
+    "ast_hash": "e83529c2763c26c5a763431cbb61e79f",
     "semantic_hash": ""
   }
 }
