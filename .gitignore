@@ -1,0 +1,6 @@
+# Archive brute du scraping de l'ancien site (HTML IONOS + images originales)
+scrape/
+graphify-out/cache/
+.DS_Store
+.obsidian/workspace*.json
+__pycache__/

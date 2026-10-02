@@ -1,0 +1,109 @@
+---
+title: Contact & devis gratuit — DS DECORATION | Nangy (74)
+description: Contactez DS DECORATION SAS, 291 route de Loex à Nangy (74380). Tél. 07 49 150 150. Devis gratuit pour vos travaux de peinture, tapisserie, plâtrerie et revêtements.
+path: contact/
+nav: contact
+---
+    <section class="page-hero">
+      <div class="page-hero__bg"><img src="{{root}}assets/img/atelier-echelle.webp" alt=""></div>
+      <div class="container">
+        <ol class="breadcrumb"><li><a href="{{root}}">Accueil</a></li><li>Contact</li></ol>
+        <h1>Contactez-nous</h1>
+        <p class="lead">Vous avez des questions ou un projet ? Nous vous proposons un devis gratuit pour l'estimation de vos travaux.</p>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="devis">
+      <div class="container contact">
+        <div class="contact-cards">
+          <div class="contact-card reveal">
+            {{icon:phone}}
+            <div>
+              <h3>Par téléphone</h3>
+              <p><a href="tel:{{phone_href}}">{{phone}}</a><br><small>Caroline — Assistante administrative</small></p>
+              <p style="margin-top:8px"><a href="tel:{{phone_manager_href}}">{{phone_manager}}</a><br><small>Sébastien — Gérant</small></p>
+            </div>
+          </div>
+          <div class="contact-card reveal" data-delay="1">
+            {{icon:mail}}
+            <div>
+              <h3>Par e-mail</h3>
+              <p><a href="mailto:{{email}}">{{email}}</a></p>
+            </div>
+          </div>
+          <div class="contact-card reveal" data-delay="2">
+            {{icon:pin}}
+            <div>
+              <h3>Nos bureaux</h3>
+              <p>DS DECORATION SAS<br>{{address}}<br>{{city}}</p>
+            </div>
+          </div>
+          <div class="contact-card reveal" data-delay="3">
+            {{icon:building}}
+            <div>
+              <h3>Siège social</h3>
+              <p>3 rue de Verdun<br>69190 Saint-Fons</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="form reveal" id="contact-form" data-to="{{email}}" novalidate>
+          <h2 style="font-size:1.8rem">Demande de devis</h2>
+          <p style="color:var(--muted)">Décrivez-nous votre projet, nous revenons vers vous rapidement.</p>
+          <div class="form__grid">
+            <div class="field">
+              <label for="nom">Nom <abbr title="obligatoire">*</abbr></label>
+              <input id="nom" name="nom" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Adresse e-mail <abbr title="obligatoire">*</abbr></label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="telephone">Téléphone</label>
+              <input id="telephone" name="telephone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="ville">Ville du chantier</label>
+              <input id="ville" name="ville" type="text" autocomplete="address-level2">
+            </div>
+            <div class="field field--full">
+              <label for="prestation">Type de travaux</label>
+              <select id="prestation" name="prestation">
+                <option value="">Choisir une prestation…</option>
+                <option>Peinture</option>
+                <option>Tapisserie / papier peint</option>
+                <option>Plâtrerie / cloisons / combles</option>
+                <option>Revêtement de sol et mur</option>
+                <option>Rénovation complète</option>
+                <option>Rénovation après sinistre</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="message">Message <abbr title="obligatoire">*</abbr></label>
+              <textarea id="message" name="message" required placeholder="Surface, pièces concernées, délais souhaités…"></textarea>
+            </div>
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <label class="consent field--full">
+              <input type="checkbox" name="consentement" required>
+              <span>J'accepte que les données saisies dans ce formulaire soient utilisées dans le but d'établir le contact. Je peux révoquer mon consentement à tout moment.</span>
+            </label>
+          </div>
+          <div style="margin-top:24px">
+            <button class="btn btn--primary" type="submit">Envoyer ma demande {{icon:arrow}}</button>
+          </div>
+          <p class="form__note">Les champs suivis d'un astérisque (*) sont obligatoires.</p>
+          <p class="form__status" role="status">Votre messagerie s'ouvre avec votre demande pré-remplie : il ne reste plus qu'à cliquer sur « Envoyer ». Vous pouvez aussi nous écrire directement à {{email}}.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;background:var(--paper)">
+      <div class="container">
+        <div class="map reveal">
+          <iframe title="Plan d'accès — DS DECORATION, Nangy" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=291+route+de+Loex,+74380+Nangy,+France&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </section>

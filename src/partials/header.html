@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{canonical}}">
+  <meta name="theme-color" content="#1d1d24">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="DS DECORATION">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{site_url}}assets/img/hero-renovation.jpg">
+  <link rel="icon" type="image/png" href="{{root}}favicon.png">
+  <link rel="apple-touch-icon" href="{{root}}assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Outfit:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="{{root}}assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HousePainter",
+    "name": "DS DECORATION SAS",
+    "slogan": "Le spécialiste de votre intérieur",
+    "url": "{{site_url}}",
+    "logo": "{{site_url}}assets/img/logo.png",
+    "image": "{{site_url}}assets/img/hero-renovation.jpg",
+    "telephone": "+33749150150",
+    "email": "ds.decoration@yahoo.fr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "291 route de Loex",
+      "postalCode": "74380",
+      "addressLocality": "Nangy",
+      "addressCountry": "FR"
+    },
+    "areaServed": ["Bassin genevois", "Haute-Savoie", "Genève"],
+    "founder": "Sébastien De Ana"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__items">
+        <span class="topbar__hide-md">{{icon:pin}} {{address}}, {{city}}</span>
+        <span>{{icon:clock}} Intervention sur tout le bassin genevois</span>
+      </div>
+      <div class="topbar__items">
+        <a href="tel:{{phone_href}}">{{icon:phone}} {{phone}}</a>
+        <a href="mailto:{{email}}" class="topbar__hide-md">{{icon:mail}} {{email}}</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <a class="header__logo" href="{{root}}" aria-label="DS DECORATION — accueil">
+        <img src="{{root}}assets/img/logo.png" alt="DS DECORATION — Le spécialiste de votre intérieur" width="927" height="243">
+      </a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+      <nav class="nav" id="menu" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="{{root}}"{{nav:home}}>Accueil</a></li>
+          <li><a href="{{root}}#services">Nos services</a></li>
+          <li><a href="{{root}}nos-realisations/"{{nav:realisations}}>Nos réalisations</a></li>
+          <li><a href="{{root}}contact/"{{nav:contact}}>Contact</a></li>
+        </ul>
+        <a class="btn btn--primary" href="{{root}}contact/#devis">Devis gratuit {{icon:arrow}}</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
