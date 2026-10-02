@@ -37,3 +37,10 @@ Pour le domaine `www.dsdecoration.com` : ajouter le domaine dans Settings → Pa
 - **Mentions légales** : l'hébergeur indiqué est GitHub — à adapter si le site est hébergé ailleurs.
 - Les images proviennent de l'ancien site ; la bannière d'accueil (960 px) gagnerait à être
   remplacée par une photo plus grande.
+
+## Documentation projet
+
+- `docs/` : coffre **Obsidian** (ouvrir le dossier comme vault) — contenu récupéré de l'ancien site,
+  charte graphique, architecture, analyse NotebookLM, liste des tâches.
+- `graphify-out/` : graphe de connaissances du projet (`graph.html` à ouvrir dans un navigateur,
+  `GRAPH_REPORT.md`). Mise à jour : `graphify update .`
