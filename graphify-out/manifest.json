@@ -298,45 +298,5 @@
     "mtime": 1790975264.7460063,
     "ast_hash": "64aa335e1d46c90b0ff6db364ca4743e",
     "semantic_hash": ""
-  },
-  "assets/js/vendor/CustomEase.min.js": {
-    "mtime": 1790975113.4160461,
-    "ast_hash": "190522f15cbd60934d7bcdf550b5f1cd",
-    "semantic_hash": ""
-  },
-  "assets/js/vendor/Flip.min.js": {
-    "mtime": 1790975113.4160461,
-    "ast_hash": "8f0bcf0f8bd6d1a5618f074aea4d8aa1",
-    "semantic_hash": ""
-  },
-  "assets/js/vendor/ScrollTrigger.min.js": {
-    "mtime": 1790975113.4160461,
-    "ast_hash": "5445d0e95e612449839d2462ba8ab7d0",
-    "semantic_hash": ""
-  },
-  "assets/js/vendor/SplitText.min.js": {
-    "mtime": 1790975113.4160461,
-    "ast_hash": "8b363297044e4ded73dc94acb087cbdc",
-    "semantic_hash": ""
-  },
-  "assets/js/vendor/gsap.min.js": {
-    "mtime": 1790975113.4160461,
-    "ast_hash": "bf3fd8ec2a5d9f4531b4c310222361f8",
-    "semantic_hash": ""
-  },
-  "assets/js/vendor/lenis.min.js": {
-    "mtime": 1790975113.4260461,
-    "ast_hash": "e4bb975a6941b411581aeb2454aa47e9",
-    "semantic_hash": ""
-  },
-  "assets/js/vendor/LICENSE-lenis.txt": {
-    "mtime": 1790975113.4260461,
-    "ast_hash": "8d3685ce7c841d3581686c9dce65a90a",
-    "semantic_hash": ""
-  },
-  "assets/js/vendor/README.txt": {
-    "mtime": 1790975113.4260461,
-    "ast_hash": "d4e519583ad2a1156e10762b119630a3",
-    "semantic_hash": ""
   }
 }
