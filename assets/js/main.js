@@ -39,10 +39,41 @@
       var fc = shot.closest('figure').querySelector('figcaption');
       caption.textContent = fc.firstChild.textContent.trim() + ' : ' + fc.querySelector('span').textContent.trim();
     };
+    var animated = function () {
+      return window.gsap && document.documentElement.classList.contains('motion');
+    };
     var close = function () {
-      viewer.classList.remove('open');
-      document.body.style.overflow = '';
-      if (opener) opener.focus();
+      var done = function () {
+        viewer.classList.remove('open');
+        document.body.style.overflow = '';
+        if (window.__lenis) window.__lenis.start();
+        if (opener) opener.focus();
+      };
+      if (animated()) {
+        window.gsap.to(viewer, { autoAlpha: 0, duration: .35, ease: 'power2.in', onComplete: function () {
+          window.gsap.set(viewer, { clearProps: 'opacity,visibility' });
+          done();
+        } });
+      } else {
+        done();
+      }
+    };
+    // Agrandit la photo depuis la position de sa vignette
+    var zoomFrom = function (thumb) {
+      if (!animated()) return;
+      var from = thumb.getBoundingClientRect();
+      var run = function () {
+        var to = img.getBoundingClientRect();
+        if (!to.width) return;
+        window.gsap.fromTo(img, {
+          x: from.left + from.width / 2 - (to.left + to.width / 2),
+          y: from.top + from.height / 2 - (to.top + to.height / 2),
+          scale: from.width / to.width
+        }, { x: 0, y: 0, scale: 1, duration: .8, ease: 'expo.out' });
+      };
+      if (img.complete && img.naturalWidth) run(); else img.addEventListener('load', run, { once: true });
+      window.gsap.fromTo(viewer, { backgroundColor: 'rgba(23, 29, 35, 0)' }, { backgroundColor: 'rgba(23, 29, 35, .96)', duration: .5 });
+      window.gsap.from([caption, viewer.querySelector('.viewer-bar')], { autoAlpha: 0, y: 16, duration: .5, delay: .3 });
     };
 
     shots.forEach(function (shot, i) {
@@ -51,6 +82,8 @@
         show(i);
         viewer.classList.add('open');
         document.body.style.overflow = 'hidden';
+        if (window.__lenis) window.__lenis.stop();
+        zoomFrom(shot.querySelector('img'));
         viewer.querySelector('[data-close]').focus();
       });
     });

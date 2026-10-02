@@ -17,7 +17,14 @@
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
   <link rel="preload" href="../assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/js/vendor/lenis.css">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+      setTimeout(function () { if (!window.__motion) document.documentElement.classList.remove('motion'); }, 4000);
+    }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,8 +47,14 @@
   }
   </script>
 </head>
-<body>
+<body data-page="Réalisations">
   <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <div class="curtain" aria-hidden="true">
+    <span class="curtain-layer c-purple"></span>
+    <span class="curtain-layer c-red"></span>
+    <span class="curtain-layer c-orange"><span class="curtain-label">Réalisations</span></span>
+  </div>
 
   <header class="site-header">
     <div class="wrap">
@@ -63,7 +76,7 @@
     <header class="page-head">
       <div class="wrap">
         <p class="crumbs"><a href="../">Accueil</a> / Réalisations</p>
-        <h1>Nos réalisations</h1>
+        <h1 data-split>Nos réalisations</h1>
         <p class="intro">Des chantiers de ces dernières années. Sur plusieurs photos, les petites vignettes montrent la pièce avant les travaux. Cliquez sur une photo pour l'agrandir.</p>
       </div>
     </header>
@@ -110,7 +123,7 @@
     <section class="block block-plaster" aria-labelledby="avis-titre">
       <div class="wrap">
         <div class="block-head">
-          <h2 id="avis-titre">Ce que disent nos clients</h2>
+          <h2 id="avis-titre" data-split>Ce que disent nos clients</h2>
         </div>
         <div class="reviews">
           <figure class="review">
@@ -135,7 +148,7 @@
 
     <section class="callout" aria-labelledby="contact-titre">
       <div class="wrap">
-        <h2 id="contact-titre">Un chantier du même genre ?</h2>
+        <h2 id="contact-titre" data-split>Un chantier du même genre ?</h2>
         <p class="intro">Nous passons voir les lieux et vous envoyons un devis gratuit.</p>
         <div class="actions">
           <a class="btn btn-light" href="../contact/">Demander un devis</a>
@@ -177,6 +190,14 @@
     <a href="../contact/">Demander un devis</a>
   </nav>
 
+  <div class="cursor" aria-hidden="true"><span>Agrandir</span></div>
+
+  <script src="../assets/js/vendor/gsap.min.js" defer></script>
+  <script src="../assets/js/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/js/vendor/SplitText.min.js" defer></script>
+  <script src="../assets/js/vendor/CustomEase.min.js" defer></script>
+  <script src="../assets/js/vendor/lenis.min.js" defer></script>
   <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/motion.js" defer></script>
 </body>
 </html>

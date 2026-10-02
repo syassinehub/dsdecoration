@@ -17,7 +17,14 @@
   <link rel="icon" type="image/png" href="../favicon.png">
   <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
   <link rel="preload" href="../assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/js/vendor/lenis.css">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+      setTimeout(function () { if (!window.__motion) document.documentElement.classList.remove('motion'); }, 4000);
+    }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,8 +47,14 @@
   }
   </script>
 </head>
-<body>
+<body data-page="Contact">
   <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <div class="curtain" aria-hidden="true">
+    <span class="curtain-layer c-purple"></span>
+    <span class="curtain-layer c-red"></span>
+    <span class="curtain-layer c-orange"><span class="curtain-label">Contact</span></span>
+  </div>
 
   <header class="site-header">
     <div class="wrap">
@@ -63,7 +76,7 @@
     <header class="page-head">
       <div class="wrap">
         <p class="crumbs"><a href="../">Accueil</a> / Contact</p>
-        <h1>Parlons de vos travaux</h1>
+        <h1 data-split>Parlons de vos travaux</h1>
         <p class="intro">Le devis est gratuit. Le plus simple est de nous appeler ; vous pouvez aussi nous décrire votre projet avec le formulaire.</p>
       </div>
     </header>
@@ -184,6 +197,14 @@
     <a href="../contact/">Demander un devis</a>
   </nav>
 
+  <div class="cursor" aria-hidden="true"><span>Agrandir</span></div>
+
+  <script src="../assets/js/vendor/gsap.min.js" defer></script>
+  <script src="../assets/js/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/js/vendor/SplitText.min.js" defer></script>
+  <script src="../assets/js/vendor/CustomEase.min.js" defer></script>
+  <script src="../assets/js/vendor/lenis.min.js" defer></script>
   <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/motion.js" defer></script>
 </body>
 </html>

@@ -32,3 +32,8 @@ Les trois formes du logo, redessinées en SVG, posées derrière la photo d'ouve
 ## Photos
 Uniquement des photos de chantiers réels. Recadrages sans vignettes pour l'accueil,
 originaux avec vignettes « avant » dans la galerie.
+
+## Animations (v3)
+Bibliothèques retenues après comparaison GitHub : GSAP (28,8k étoiles) et Lenis (16k, MIT).
+Écartées : AOS (fondus génériques, plus maintenu depuis 2024), Barba (peu actif).
+Rideau de page en trois couches de couleur, comme des couches de peinture ; détail dans le README.

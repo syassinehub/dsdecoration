@@ -17,7 +17,14 @@
   <link rel="icon" type="image/png" href="{{root}}favicon.png">
   <link rel="apple-touch-icon" href="{{root}}assets/img/apple-touch-icon.png">
   <link rel="preload" href="{{root}}assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{root}}assets/js/vendor/lenis.css">
   <link rel="stylesheet" href="{{root}}assets/css/style.css">
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+      setTimeout(function () { if (!window.__motion) document.documentElement.classList.remove('motion'); }, 4000);
+    }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,8 +47,14 @@
   }
   </script>
 </head>
-<body>
+<body data-page="{{label}}">
   <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <div class="curtain" aria-hidden="true">
+    <span class="curtain-layer c-purple"></span>
+    <span class="curtain-layer c-red"></span>
+    <span class="curtain-layer c-orange"><span class="curtain-label">{{label}}</span></span>
+  </div>
 
   <header class="site-header">
     <div class="wrap">

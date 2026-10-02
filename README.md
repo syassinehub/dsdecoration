@@ -32,6 +32,24 @@ Styles : `assets/css/style.css` (palette en tête de fichier). Scripts : `assets
 - Les trois formes du logo, redessinées en SVG, sont le seul élément décoratif de la page d'accueil.
 - Aucun cookie ni appel externe : la carte Google n'est chargée qu'au clic.
 
+## Animations
+
+`assets/js/motion.js`, avec deux bibliothèques copiées depuis npm dans `assets/js/vendor/` :
+GSAP 3.15 (ScrollTrigger, SplitText, CustomEase ; licence standard gratuite) et Lenis 1.3 (MIT).
+
+- Rideau entre les pages : trois couches aux couleurs du logo, avec le nom de la page.
+- Défilement fluide ; en-tête masqué en descendant, visible en remontant.
+- Accueil : titre révélé ligne par ligne, photo dévoilée comme un coup de rouleau,
+  formes du logo qui tombent puis suivent le défilement en parallaxe.
+- Bandeau des métiers qui défile, plus vite et dans le sens du défilement.
+- Photos dévoilées au défilement, ligne de progression sous les étapes,
+  citation qui se colore mot à mot.
+- Galerie : curseur « Agrandir », photo agrandie depuis sa vignette.
+- Boutons aimantés et remplissage au survol.
+
+Si le visiteur a activé « réduire les animations » dans son système, tout est désactivé et le site
+reste complet. Si les scripts ne se chargent pas, le rideau s'efface seul au bout de 4 secondes.
+
 ## Avant mise en service
 
 - Mentions légales : compléter l'hébergeur.
