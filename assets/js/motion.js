@@ -174,13 +174,11 @@
       });
     }
 
-    // Métiers
-    $$('.trade').forEach(function (trade, i) {
-      revealImage($('picture', trade), desktop ? (i % 2) * .15 : 0);
-      gsap.from($$('h3, p', trade), {
-        autoAlpha: 0, y: 28, stagger: .08, duration: .9,
-        scrollTrigger: { trigger: trade, start: 'top 70%' }
-      });
+    // Métiers : titres qui montent, ligne par ligne
+    $$('.trade-row').forEach(function (row) {
+      gsap.timeline({ scrollTrigger: { trigger: row, start: 'top 85%' } })
+        .from($('h3', row), { yPercent: 60, autoAlpha: 0, duration: 1 }, 0)
+        .from($$('p, .trade-thumb', row), { y: 24, autoAlpha: 0, duration: .9, stagger: .08 }, .15);
     });
 
     // Liste « Pour qui / Où / … »
@@ -214,31 +212,60 @@
       }
     }
 
-    // Aperçu des chantiers : volet + parallaxe dans le cadre
-    $$('.work figure').forEach(function (fig, i) {
-      var picture = $('picture', fig);
-      revealImage(picture, desktop ? i * .12 : 0);
-      gsap.fromTo($('img', picture), { yPercent: -6 }, {
-        yPercent: 6, ease: 'none',
-        scrollTrigger: { trigger: fig, start: 'top bottom', end: 'bottom top', scrub: true }
-      });
-      gsap.from($('figcaption', fig), { autoAlpha: 0, y: 14, scrollTrigger: { trigger: fig, start: 'top 75%' } });
-    });
+    // Accueil : l'éventail des photos « avant » s'ouvre au défilement
+    var fan = $$('.fan-cards img');
+    if (fan.length) {
+      gsap.timeline({ scrollTrigger: { trigger: '.fan', start: 'top 85%', end: 'center 45%', scrub: 1 } })
+        .from(fan[0], { xPercent: 45, rotation: 9, y: 40 }, 0)
+        .from(fan[1], { rotation: -2, y: 80, scale: .9 }, 0)
+        .from(fan[2], { xPercent: -45, rotation: -10, y: 40 }, 0);
+      gsap.from('.fan', { autoAlpha: 0, y: 60, duration: 1.1, scrollTrigger: { trigger: '.fan', start: 'top 88%' } });
+      gsap.from('.teaser .prose p', { autoAlpha: 0, y: 26, stagger: .12, scrollTrigger: { trigger: '.teaser', start: 'top 70%' } });
+    }
 
-    // Citation : les mots se colorent au fil de la lecture
-    var quote = $('.quote blockquote p');
-    if (quote) {
-      SplitText.create(quote, {
-        type: 'words',
-        autoSplit: true,
-        onSplit: function (self) {
-          return gsap.fromTo(self.words, { color: '#b8c0c8' }, {
-            color: '#1f262e', stagger: .1, ease: 'none',
-            scrollTrigger: { trigger: '.quote', start: 'top 80%', end: 'bottom 45%', scrub: true }
+    // Réalisations : fiches de chantier en défilement horizontal (ordinateur)
+    var cases = $('.cases');
+    if (cases) {
+      var caseEls = $$('.case', cases);
+      if (desktop) {
+        cases.classList.add('is-horizontal');
+        var track = $('.cases-track', cases);
+        var distance = function () { return track.scrollWidth - window.innerWidth; };
+        var slide = gsap.to(track, {
+          x: function () { return -distance(); }, ease: 'none',
+          scrollTrigger: {
+            trigger: cases, pin: true, scrub: 1, invalidateOnRefresh: true,
+            end: function () { return '+=' + distance(); }
+          }
+        });
+        gsap.to('.cases-bar span', {
+          scaleX: 1, ease: 'none',
+          scrollTrigger: { trigger: cases, start: 'top top', end: function () { return '+=' + distance(); }, scrub: true }
+        });
+        caseEls.forEach(function (c, i) {
+          var img = $('.case-photo img', c);
+          gsap.set(img, { scale: 1.18 });
+          gsap.fromTo(img, { xPercent: -7 }, {
+            xPercent: 7, ease: 'none',
+            scrollTrigger: { trigger: c, containerAnimation: slide, start: 'left right', end: 'right left', scrub: true }
           });
-        }
-      });
-      gsap.from('.quote figcaption', { autoAlpha: 0, y: 20, scrollTrigger: { trigger: '.quote figcaption', start: 'top 92%' } });
+          // La première fiche est visible dès l'arrivée : elle se déclenche sur la section elle-même
+          var when = i === 0
+            ? { trigger: cases, start: 'top 65%' }
+            : { trigger: c, containerAnimation: slide, start: 'left 70%' };
+          gsap.timeline({ scrollTrigger: when })
+            .from($$('.case-count, h2, .case-text > p', c), { y: 40, autoAlpha: 0, stagger: .08, duration: .9 })
+            .from($$('.case-before li', c), {
+              y: 50, rotation: function (i) { return [-8, 6, -4][i % 3]; }, autoAlpha: 0,
+              stagger: .1, duration: .9, ease: 'back.out(1.6)'
+            }, '-=.5');
+        });
+      } else {
+        caseEls.forEach(function (c) {
+          revealImage($('.case-photo', c));
+          gsap.from($$('.case-text > *', c), { y: 30, autoAlpha: 0, stagger: .08, scrollTrigger: { trigger: c, start: 'top 60%' } });
+        });
+      }
     }
 
     // Bandeau contact
@@ -262,25 +289,13 @@
       }
     }
 
-    // Galerie : apparition par vagues
-    var shots = $$('.shot');
-    if (shots.length) {
-      gsap.set(shots, { autoAlpha: 0, y: 70 });
-      ScrollTrigger.batch(shots, {
-        start: 'top 92%',
-        onEnter: function (batch) {
-          gsap.to(batch, { autoAlpha: 1, y: 0, stagger: .12, duration: 1.1, overwrite: true });
-          batch.forEach(function (shot) {
-            gsap.fromTo($('img', shot), { scale: 1.2 }, { scale: 1, duration: 1.6 });
-          });
-        }
-      });
-    }
-
     // Avis clients
     $$('.review').forEach(function (r, i) {
       gsap.from(r, { autoAlpha: 0, y: 40, duration: 1, delay: desktop ? (i % 2) * .12 : 0, scrollTrigger: { trigger: r, start: 'top 88%' } });
     });
+    if ($('.reviews-end')) {
+      gsap.from('.reviews-end > *', { autoAlpha: 0, y: 24, stagger: .1, scrollTrigger: { trigger: '.reviews-end', start: 'top 92%' } });
+    }
 
     // Page contact
     var contact = $('.contact');
@@ -324,7 +339,7 @@
 
     // Curseur « Agrandir » sur la galerie
     var cursor = $('.cursor');
-    var targets = $$('.shot button');
+    var targets = $$('button[data-full]');
     if (cursor && targets.length) {
       var cx = gsap.quickTo(cursor, 'x', { duration: .45, ease: 'power3.out' });
       var cy = gsap.quickTo(cursor, 'y', { duration: .45, ease: 'power3.out' });
@@ -336,19 +351,36 @@
       });
     }
 
-    // Légère inclinaison des photos de métiers sous la souris
-    $$('.trade picture').forEach(function (pic) {
-      var img = $('img', pic);
-      pic.addEventListener('mousemove', function (e) {
-        var r = pic.getBoundingClientRect();
-        gsap.to(img, {
-          x: ((e.clientX - r.left) / r.width - .5) * 18,
-          y: ((e.clientY - r.top) / r.height - .5) * 12,
-          scale: 1.06, duration: .8, ease: 'power3.out'
+    // Métiers : la photo de matière apparaît et suit la souris
+    var preview = $('.trade-preview');
+    var previewRows = $$('.trade-row[data-preview]');
+    if (preview && previewRows.length) {
+      var pimg = $('img', preview);
+      var px = gsap.quickTo(preview, 'x', { duration: .6, ease: 'power3.out' });
+      var py = gsap.quickTo(preview, 'y', { duration: .6, ease: 'power3.out' });
+      var prot = gsap.quickTo(preview, 'rotation', { duration: .8, ease: 'power3.out' });
+      var lastX = 0;
+      var place = function (e) {
+        px(e.clientX + 30);
+        py(e.clientY - preview.offsetHeight / 2);
+        prot(Math.max(-12, Math.min(12, (e.clientX - lastX) * .6)));
+        lastX = e.clientX;
+      };
+      gsap.set(preview, { scale: .6 });
+      previewRows.forEach(function (row) {
+        row.addEventListener('mouseenter', function (e) {
+          pimg.src = row.getAttribute('data-preview');
+          lastX = e.clientX;
+          gsap.set(preview, { x: e.clientX + 30, y: e.clientY - preview.offsetHeight / 2 });
+          gsap.to(preview, { autoAlpha: 1, scale: 1, duration: .5, ease: 'power3.out', overwrite: 'auto' });
+          gsap.fromTo(pimg, { scale: 1.4 }, { scale: 1, duration: .8, ease: 'power3.out' });
+        });
+        row.addEventListener('mousemove', place);
+        row.addEventListener('mouseleave', function () {
+          gsap.to(preview, { autoAlpha: 0, scale: .6, duration: .35, ease: 'power2.in', overwrite: 'auto' });
         });
       });
-      pic.addEventListener('mouseleave', function () { gsap.to(img, { x: 0, y: 0, scale: 1, duration: 1, ease: 'power3.out' }); });
-    });
+    }
   }
 
   // Lancement : on attend les polices pour découper les titres correctement

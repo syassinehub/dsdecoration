@@ -11,8 +11,8 @@
     });
   }
 
-  // Visionneuse : agrandit les photos de la galerie
-  var shots = Array.prototype.slice.call(document.querySelectorAll('.shot button'));
+  // Visionneuse : agrandit les photos des chantiers (boutons portant data-full)
+  var shots = Array.prototype.slice.call(document.querySelectorAll('button[data-full]'));
   if (shots.length) {
     var viewer = document.createElement('div');
     viewer.className = 'viewer';
@@ -36,8 +36,7 @@
       img.onload = function () { img.style.visibility = ''; };
       img.src = shot.getAttribute('data-full');
       img.alt = shot.querySelector('img').alt;
-      var fc = shot.closest('figure').querySelector('figcaption');
-      caption.textContent = fc.firstChild.textContent.trim() + ' : ' + fc.querySelector('span').textContent.trim();
+      caption.textContent = shot.getAttribute('data-caption') || '';
     };
     var animated = function () {
       return window.gsap && document.documentElement.classList.contains('motion');

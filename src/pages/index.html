@@ -44,41 +44,29 @@ nav: home
           <h2 id="metiers-titre" data-split>Nos quatre métiers</h2>
           <p>On peut nous confier une seule pièce ou tout un logement. Quand un chantier demande plusieurs corps de métier, c'est la même équipe qui enchaîne.</p>
         </div>
-        <div class="trades">
-          <article class="trade">
-            <picture>
-              <source srcset="{{root}}assets/img/photos/terrasse.webp" type="image/webp">
-              <img src="{{root}}assets/img/photos/terrasse.jpg" alt="Terrasse en bois avec garde-corps et escalier repeints en gris" width="660" height="600" loading="lazy">
-            </picture>
+        <ul class="trade-list">
+          <li class="trade-row" data-preview="{{root}}assets/img/details/peinture.webp">
+            <img class="trade-thumb" src="{{root}}assets/img/details/peinture.webp" alt="" width="220" height="280" loading="lazy">
             <h3>Peinture</h3>
             <p>Murs, plafonds, portes, fenêtres, volets, boiseries, meubles, et aussi les façades. Le travail est autant technique (préparation des supports, enduits) que décoratif.</p>
-          </article>
-          <article class="trade">
-            <picture>
-              <source srcset="{{root}}assets/img/photos/salon.webp" type="image/webp">
-              <img src="{{root}}assets/img/photos/salon.jpg" alt="Salon avec un papier peint panoramique de plage au-dessus du canapé" width="800" height="448" loading="lazy">
-            </picture>
-            <h3>Papiers peints et tapisserie</h3>
-            <p>Pose de tous les supports, des plus classiques aux plus délicats à travailler.</p>
-            <p class="materials">Papier peint anglais traditionnel, intissé, vinyle, expansé, velours floqué, toile de verre, papier magnétique.</p>
-          </article>
-          <article class="trade">
-            <picture>
-              <source srcset="{{root}}assets/img/photos/combles.webp" type="image/webp">
-              <img src="{{root}}assets/img/photos/combles.jpg" alt="Combles aménagés : murs enduits bleu-vert, spots au plafond, sol en pierre claire" width="800" height="402" loading="lazy">
-            </picture>
+          </li>
+          <li class="trade-row" data-preview="{{root}}assets/img/details/papier-peint.webp">
+            <img class="trade-thumb" src="{{root}}assets/img/details/papier-peint.webp" alt="" width="350" height="210" loading="lazy">
+            <h3>Papiers peints</h3>
+            <p>Tous les supports, des plus classiques aux plus délicats à poser : papier peint anglais traditionnel, intissé, vinyle, expansé, velours floqué, toile de verre, papier magnétique.</p>
+          </li>
+          <li class="trade-row" data-preview="{{root}}assets/img/details/platrerie.webp">
+            <img class="trade-thumb" src="{{root}}assets/img/details/platrerie.webp" alt="" width="330" height="250" loading="lazy">
             <h3>Plâtrerie</h3>
             <p>Cloisons, faux plafonds et aménagement de combles, pour redécouper un espace ou gagner une pièce.</p>
-          </article>
-          <article class="trade">
-            <picture>
-              <source srcset="{{root}}assets/img/photos/salle-de-bain.webp" type="image/webp">
-              <img src="{{root}}assets/img/photos/salle-de-bain.jpg" alt="Salle de bains en carrelage gris grand format avec frise en pierre" width="450" height="468" loading="lazy">
-            </picture>
+          </li>
+          <li class="trade-row" data-preview="{{root}}assets/img/details/carrelage.webp">
+            <img class="trade-thumb" src="{{root}}assets/img/details/carrelage.webp" alt="" width="290" height="230" loading="lazy">
             <h3>Sols et murs</h3>
             <p>Carrelage et faïence, parquet massif ou stratifié, sols souples type linoléum ou PVC.</p>
-          </article>
-        </div>
+          </li>
+        </ul>
+        <div class="trade-preview" aria-hidden="true"><img alt=""></div>
       </div>
     </section>
 
@@ -126,44 +114,20 @@ nav: home
       </div>
     </section>
 
-    <section class="block" aria-labelledby="chantiers-titre">
-      <div class="wrap">
-        <div class="block-head">
-          <h2 id="chantiers-titre" data-split>Quelques chantiers</h2>
-          <p>Toutes les photos du site viennent de nos chantiers.</p>
+    <section class="block teaser" aria-labelledby="chantiers-titre">
+      <div class="wrap teaser-grid">
+        <div class="prose">
+          <h2 id="chantiers-titre" data-split>Avant, pendant, après</h2>
+          <p>Sur la page Réalisations, chaque chantier est présenté avec les photos prises avant ou pendant les travaux : des combles où la charpente était encore à nu, des boiseries vernies foncées repeintes en blanc et bleu ardoise, une salle d'eau refaite du sol au plafond.</p>
+          <p><a class="link-strong" href="{{root}}nos-realisations/">Voir les huit chantiers</a></p>
         </div>
-        <div class="work">
-          <figure>
-            <picture>
-              <source srcset="{{root}}assets/img/photos/cuisine.webp" type="image/webp">
-              <img src="{{root}}assets/img/photos/cuisine.jpg" alt="Cuisine rénovée, crédence en grands carreaux anthracite" width="800" height="465" loading="lazy">
-            </picture>
-            <figcaption>Cuisine entièrement refaite : crédence, peinture, sol.</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source srcset="{{root}}assets/img/photos/douche.webp" type="image/webp">
-              <img src="{{root}}assets/img/photos/douche.jpg" alt="Douche vitrée, faïence blanche et frise de mosaïque" width="272" height="600" loading="lazy">
-            </picture>
-            <figcaption>Salle d'eau refaite.</figcaption>
-          </figure>
-          <figure>
-            <picture>
-              <source srcset="{{root}}assets/img/photos/wc.webp" type="image/webp">
-              <img src="{{root}}assets/img/photos/wc.jpg" alt="WC suspendu, faïence grise à mi-hauteur" width="322" height="600" loading="lazy">
-            </picture>
-            <figcaption>WC : faïence, peinture et sol.</figcaption>
-          </figure>
-        </div>
-        <p class="work-more"><a class="link-strong" href="{{root}}nos-realisations/">Voir tous les chantiers et les avis clients</a></p>
-      </div>
-    </section>
-
-    <section class="block block-plaster" aria-label="Avis d'un client">
-      <div class="wrap">
-        <figure class="quote">
-          <blockquote><p>Au-delà de la qualité du travail, nous avons été très sensibles à la propreté du chantier. Des protections ont été installées jusque dans les parties communes de notre immeuble, et les délais annoncés ont été respectés.</p></blockquote>
-          <figcaption><strong>Gilles L.</strong>, rénovation complète de sa cuisine en deux semaines (Rhône)</figcaption>
+        <figure class="fan">
+          <div class="fan-cards">
+            <img src="{{root}}assets/img/avant/combles-1.webp" alt="Combles avant travaux, charpente à nu" width="286" height="372" loading="lazy">
+            <img src="{{root}}assets/img/avant/combles-2.webp" alt="Combles pendant les travaux, plaques de plâtre posées" width="296" height="372" loading="lazy">
+            <img src="{{root}}assets/img/avant/combles-3.webp" alt="Combles pendant les travaux, enduits en cours" width="256" height="186" loading="lazy">
+          </div>
+          <figcaption>Les combles, pendant les travaux.</figcaption>
         </figure>
       </div>
     </section>
