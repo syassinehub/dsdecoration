@@ -351,7 +351,9 @@
       });
     }
 
-    // Métiers : la photo de matière apparaît et suit la souris
+    // Métiers : la photo de matière apparaît et suit la souris.
+    // Elle ne s'affiche que sur un vrai mouvement de souris (pas quand la page défile sous
+    // un curseur immobile) et disparaît dès qu'on fait défiler.
     var preview = $('.trade-preview');
     var previewRows = $$('.trade-row[data-preview]');
     if (preview && previewRows.length) {
@@ -359,27 +361,50 @@
       var px = gsap.quickTo(preview, 'x', { duration: .6, ease: 'power3.out' });
       var py = gsap.quickTo(preview, 'y', { duration: .6, ease: 'power3.out' });
       var prot = gsap.quickTo(preview, 'rotation', { duration: .8, ease: 'power3.out' });
+      var activeRow = null;
+      var shown = false;
       var lastX = 0;
-      var place = function (e) {
-        px(e.clientX + 30);
-        py(e.clientY - preview.offsetHeight / 2);
-        prot(Math.max(-12, Math.min(12, (e.clientX - lastX) * .6)));
-        lastX = e.clientX;
+      var lastPointer = { x: -1, y: -1 };
+      var lastScroll = 0;
+
+      var hide = function () {
+        if (!shown) return;
+        shown = false;
+        activeRow = null;
+        gsap.to(preview, { autoAlpha: 0, scale: .6, duration: .3, ease: 'power2.in', overwrite: 'auto' });
       };
-      gsap.set(preview, { scale: .6 });
-      previewRows.forEach(function (row) {
-        row.addEventListener('mouseenter', function (e) {
+      var show = function (row, e) {
+        if (activeRow !== row) {
+          activeRow = row;
           pimg.src = row.getAttribute('data-preview');
+          gsap.fromTo(pimg, { scale: 1.4 }, { scale: 1, duration: .8, ease: 'power3.out' });
+        }
+        if (!shown) {
+          shown = true;
           lastX = e.clientX;
           gsap.set(preview, { x: e.clientX + 30, y: e.clientY - preview.offsetHeight / 2 });
           gsap.to(preview, { autoAlpha: 1, scale: 1, duration: .5, ease: 'power3.out', overwrite: 'auto' });
-          gsap.fromTo(pimg, { scale: 1.4 }, { scale: 1, duration: .8, ease: 'power3.out' });
+        }
+      };
+      gsap.set(preview, { scale: .6 });
+
+      previewRows.forEach(function (row) {
+        row.addEventListener('mousemove', function (e) {
+          // Ignore les « mousemove » synthétiques envoyés quand le contenu bouge sous le curseur
+          if (e.clientX === lastPointer.x && e.clientY === lastPointer.y) return;
+          lastPointer = { x: e.clientX, y: e.clientY };
+          if (Date.now() - lastScroll < 200) return;
+          show(row, e);
+          px(e.clientX + 30);
+          py(e.clientY - preview.offsetHeight / 2);
+          prot(Math.max(-12, Math.min(12, (e.clientX - lastX) * .6)));
+          lastX = e.clientX;
         });
-        row.addEventListener('mousemove', place);
-        row.addEventListener('mouseleave', function () {
-          gsap.to(preview, { autoAlpha: 0, scale: .6, duration: .35, ease: 'power2.in', overwrite: 'auto' });
-        });
+        row.addEventListener('mouseleave', hide);
       });
+      var onScroll = function () { lastScroll = Date.now(); hide(); };
+      lenis.on('scroll', onScroll);
+      window.addEventListener('scroll', onScroll, { passive: true });
     }
   }
 
